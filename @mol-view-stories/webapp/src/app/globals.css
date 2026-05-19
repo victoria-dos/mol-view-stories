@@ -243,6 +243,16 @@
     width: 2.25rem;
   }
 
+  /* w-14 is used for IJK symmetry inputs in wizard/structure helper */
+  .w-14 {
+    width: 3.5rem;
+  }
+
+  /* border-b-2 used for wizard component tab underline indicator */
+  .border-b-2 {
+    border-bottom-width: 2px;
+  }
+
   /* margin classes only used in molstar-components, not in webapp src */
   .mt-3 {
     margin-top: 0.75rem;
@@ -307,6 +317,9 @@
     .sm\:max-w-\[520px\] {
       max-width: 520px;
     }
+    .sm\:max-w-\[860px\] {
+      max-width: 860px;
+    }
   }
 }
 
@@ -318,4 +331,6 @@
 }
 [role='dialog'] [data-slot='tabs-trigger'][data-state='active'] {
   color: var(--foreground);
+  /* Wizard component tabs use border-b-2 underline pattern; force the active border color. */
+  border-bottom-color: var(--color-primary);
 }
